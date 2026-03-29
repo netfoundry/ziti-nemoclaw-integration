@@ -1,0 +1,20 @@
+[Unit]
+Description=Ziti Nemoclaw Watcher and Intercept Manager
+# Ensure Docker is fully up before we try to listen for events
+After=docker.service
+Requires=docker.service
+
+[Service]
+# Path to the script we built together
+ExecStart=/usr/local/bin/znemoclaw-watcher.sh
+# Standard for background listeners
+Restart=always
+RestartSec=5
+# Ensures logs are sent to journalctl immediately
+Environment=PYTHONUNBUFFERED=1
+# Must run as root to modify host iptables and cgroups
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
