@@ -103,7 +103,7 @@ sudo systemctl restart ziti-edge-tunnel
 ```bash
 mkdir -p ~/repos
 cd ~/repos
-git clone https://github.com/r-caamano/ziti-nemoclaw-integration
+git clone https://github.com/netfoundry/ziti-nemoclaw-integration.git
 
 # Install the ziti-nemoclaw-watcher service
 sudo cp ~/repos/ziti-nemoclaw-integration/services/ziti-nemoclaw-watcher.service /etc/systemd/system/
