@@ -33,6 +33,7 @@ Provide the following prompt to Claude to bootstrap your network logic:
 > - `*.docker.io`
 > - `integrate.api.nvidia.com`
 > - `inference-api.nvidia.com`
+> - `auth.docker.io.cdn.cloudflare.net`
 > - `registry.npmjs.org`
 > - `*.k8.io`
 > - `*pkg.dev`"
